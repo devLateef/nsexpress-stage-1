@@ -4,5 +4,5 @@
 
 - Copy the link [here](https://github.com/devLateef/nsexpress-stage-1.git)
 - Initialize your local repository, then run `git clone < copied link above>`
-- Run `npm init -y` then run `npm install` to install all the dependencies.
+- Run `npm install` to install all the dependencies.
 - Run `npm run dev` to start the application.
