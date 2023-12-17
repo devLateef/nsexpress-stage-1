@@ -2,7 +2,8 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const port = 8000;
+const dotenv = require('dotenv').config();
+const port = process.env.PORT || 8001;
 
 app.use(express.static('public'));
 app.use(express.json());
