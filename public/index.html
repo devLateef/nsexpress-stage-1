@@ -3,21 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSEXPRESS - Stage 1</title>
+    <title>NSEXPRESS - Stage 2</title>
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <h2>You get any question?</h2>
-    <p>Feel free to contact us below</p>
+    <h2>Bootdev API with Database Integration</h2>
     <div class="container">
         <form action="/store" method="post">
             <div>
-                <label for="email">Enter your email</label>
-                <input type="email" name="email" id="email" placeholder="Enter your answer here">
+                <label for="firstname">Enter your first name</label>
+                <input name="firstname" id="firstname" placeholder="Your first name">
             </div>
             <div>
-                <label for="body">Enter your message</label>
-                <textarea name="body" id="body" cols="30" rows="5" placeholder="Enter message here"></textarea>
+                <label for="lastname">Enter your last name</label>
+                <input name="lastname" id="lastname" placeholder="Your last name">
+            </div>
+            <div>
+                <label for="email">Enter your email</label>
+                <input type="email" name="email" id="email" placeholder="Enter your email">
+            </div>
+            <div>
+                <label for="track">Enter your track</label>
+                <input name="track" id="track" placeholder="Enter your track">
+            </div>
+            <div>
+                <label for="lang">Enter your Programming Language</label>
+                <input name="lang" id="lang" placeholder="Enter your Programming Language">
+            </div>
+            <div>
+                <label for="stage">Enter your current stage</label>
+                <input name="stage" id="stage" placeholder="Enter your current stage">
             </div>
             <button type="submit">Submit</button>
         </form>

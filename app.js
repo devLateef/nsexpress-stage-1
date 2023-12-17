@@ -2,7 +2,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const port = 2000;
+const port = 8000;
 
 app.use(express.static('public'));
 app.use(express.json());
