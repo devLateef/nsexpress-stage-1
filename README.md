@@ -6,3 +6,4 @@
 - Clone the repo into your local machine by running `git clone < copied link above >`
 - Run `npm install` to install all the dependencies.
 - Run `npm run dev` to start the application.
+- You can decide to run the CRUD operation on your browser or use Thunder Client Visual Studio Code Extension
