@@ -1,5 +1,6 @@
 const asyncHandler = require('express-async-handler');
 const User = require('../model/user');
+const {emailValidation, getOne} = require('../util/emailvalidation');
 
 const addUser = asyncHandler(async(req, res)=>{
     const { firstname, lastname, email, track, lang, stage } = req.body;
@@ -42,14 +43,17 @@ const findAllUsers = asyncHandler(async(req, res)=>{
 })
 
 const findOneUser = asyncHandler(async(req, res)=>{
-    const id = req.params.id
+    const identifier = req.params.id;
     try {
-        const user = await User.findOne({_id: id});
-        if(user){
-            res.status(200).json(user)
+        if (emailValidation(identifier)) {
+            const user = await User.findOne({email: identifier});
+            getOne(user, res);
         }else{
-            res.status(404).json({message: 'User not found'})
+            const user = await User.findOne({_id: identifier});
+            getOne(user, res);
+            
         }
+        
     } catch (error) {
         console.error(error);
         res.status(500).json({message: 'Internal Server Error'})
